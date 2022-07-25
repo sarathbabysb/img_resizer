@@ -1,0 +1,151 @@
+$green:#27ae60;
+$purple:#454cad;
+$black:#130f40;
+$white:#fff;
+$light-color:#666;
+$light-gray:#ededed;
+$light-bg:#f7f7f7;
+$border:.1rem solid rgba(0,0,0,.2);
+$box-shadow:0 1rem 1rem rgba(0,0,0,.05);
+
+a {
+  text-decoration: none;
+}
+
+.header{
+
+  // position: sticky;
+  // top:0; left:0; right:0;
+  // z-index: 1000;
+  // background: $white;
+  // box-shadow: $box-shadow;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  padding:.2rem 5%;
+
+  .logo{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color:$black;
+
+    i{
+      color:$purple;
+    }
+  }
+
+  .navbar-nav{
+    margin-top: 5px;
+  }
+
+  .navbar{
+    .nav-link{
+      font-size: 15px;
+      margin:0 1rem;
+      color:$light-color;
+      text-transform: capitalize;
+      font-weight: 600;
+
+      &:hover{
+        color:$purple;
+      }
+    }
+    .nav-link.active {
+      color: $purple;
+    }
+  }
+
+  .navbar-toggler {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .icons div{
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 16px;
+    background: $light-bg;
+    color:$black;
+    border-radius: .5rem;
+    margin-left: .5rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover{
+      color:$white;
+      background: $purple;
+    }
+  }
+}
+
+.master-container {
+  padding: 2rem 5%;
+  background: $light-gray;
+
+  .title {
+    color: $purple;
+  }
+
+
+  .btn {
+      display: inline-block;
+      margin-top: 20px;
+      clear: both;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: initial;
+      border: none;
+      border-radius: .2rem;
+      outline: none;
+      padding: 0 1rem;
+      height: 36px;
+      line-height: 36px;
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+      box-sizing: border-box;
+      background: $purple;
+      border-color: $purple;
+      width: 175px;
+      cursor: pointer;
+    }
+
+    .card-title {
+      background: $purple;
+      color: $white;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .input-group-text {
+      background: $purple;
+      color: $white;
+      border: 1px solid $white;
+      font-size: 12px;
+    }
+}
+
+.footer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $white;
+  box-shadow: $box-shadow;
+  padding: 1rem 5%;
+
+  .copy-right {
+    font-size: 13px;
+    margin: 0 1rem;
+    color: $light-color;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+

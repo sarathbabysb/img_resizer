@@ -1,0 +1,132 @@
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: .2rem 5%;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #130f40;
+}
+
+.header .logo i {
+  color: #454cad;
+}
+
+.header .navbar-nav {
+  margin-top: 5px;
+}
+
+.header .navbar .nav-link {
+  font-size: 15px;
+  margin: 0 1rem;
+  color: #666;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.header .navbar .nav-link:hover {
+  color: #454cad;
+}
+
+.header .navbar .nav-link.active {
+  color: #454cad;
+}
+
+.header .navbar-toggler {
+  padding: 5px;
+  font-size: 10px;
+}
+
+.header .icons div {
+  height: 3.5rem;
+  width: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 16px;
+  background: #f7f7f7;
+  color: #130f40;
+  border-radius: .5rem;
+  margin-left: .5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header .icons div:hover {
+  color: #fff;
+  background: #454cad;
+}
+
+.master-container {
+  padding: 2rem 5%;
+  background: #ededed;
+}
+
+.master-container .title {
+  color: #454cad;
+}
+
+.master-container .btn {
+  display: inline-block;
+  margin-top: 20px;
+  clear: both;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: initial;
+  border: none;
+  border-radius: .2rem;
+  outline: none;
+  padding: 0 1rem;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #454cad;
+  border-color: #454cad;
+  width: 175px;
+  cursor: pointer;
+}
+
+.master-container .card-title {
+  background: #454cad;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.master-container .input-group-text {
+  background: #454cad;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 12px;
+}
+
+.footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+  padding: 1rem 5%;
+}
+
+.footer .copy-right {
+  font-size: 13px;
+  margin: 0 1rem;
+  color: #666;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
