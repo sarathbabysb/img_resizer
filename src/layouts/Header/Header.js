@@ -41,7 +41,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink to="/img-converter" className="nav-link">
-                  Converte Image
+                  Convert Image
                 </NavLink>
               </li>
               <li className="nav-item">

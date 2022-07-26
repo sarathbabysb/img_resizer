@@ -3,7 +3,7 @@ import ImgUploader from "../components/ImgUploader/ImgUploader";
 import { downloadFile } from "../assets/js/custom";
 import Compressor from "compressorjs";
 
-const Converter = () => {
+const ImgConverter = () => {
 
   const [buttonLoading, setButtonLoading] = useState(false);
   const [inputParams, setInputParams] = useState({
@@ -13,24 +13,28 @@ const Converter = () => {
     imgWidth: "",
     imgHeight: "",
     imgFormat: "",
+    imgConvertFormat: "",
   });
+
+  const toExtenExtension = [
+    { name: "JPEG", value: "jpeg" },
+    { name: "JPG", value: "jpg" },
+    { name: "PNG", value: "png" },
+  ];
 
   const handelInput = (e) => {
     e.persist();
-    let value = e.target.value;
-    if (value != "") {
-      value = Number(value);
-    }
-    setInputParams({ ...inputParams, [e.target.name]: value });
+    setInputParams({ ...inputParams, [e.target.name]: e.target.value });
   };
-
 
   const imageDownload = (e) => {
     setButtonLoading(true);
+    let imageFileName = inputParams.imageFileName;
+    let fileName = imageFileName.split(".")[0];
+    let downloadFileName = fileName + "." + inputParams.imgConvertFormat;
     new Compressor(inputParams.imageData, {
-      quality: inputParams.imgQuality,
       success(result) {
-        downloadFile(result, inputParams.imageFileName);
+        downloadFile(result, downloadFileName);
         setButtonLoading(false);
       },
       error(err) {
@@ -43,7 +47,7 @@ const Converter = () => {
   return (
     <div className="row">
       <div className="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
-        <h4 className="title text-center">Converte Image</h4>
+        <h4 className="title text-center">Convert Image</h4>
 
         <div className="row">
           <ImgUploader
@@ -69,13 +73,13 @@ const Converter = () => {
 
                       <select
                         className="form-select form-select-sm"
-                        name="imgFrom"
+                        name="imgFormat"
                         onChange={handelInput}
-                        value="jpeg"
+                        value={inputParams.imgFormat.toLowerCase()}
                       >
-                        <option value="jpeg">JPEG</option>
-                        <option value="jpg">JPG</option>
-                        <option value="png">PNG</option>
+                        <option value={inputParams.imgFormat.toLowerCase()}>
+                          {inputParams.imgFormat.toUpperCase()}
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -91,13 +95,21 @@ const Converter = () => {
 
                       <select
                         className="form-select form-select-sm"
-                        name="imgTo"
+                        name="imgConvertFormat"
                         onChange={handelInput}
-                        value="png"
+                        value={inputParams.imgConvertFormat}
                       >
-                        <option value="jpeg">JPEG</option>
-                        <option value="jpg">JPG</option>
-                        <option value="png">PNG</option>
+                        {toExtenExtension.map((item, index) => {
+                          if (
+                            item.value !== inputParams.imgFormat.toLowerCase()
+                          ) {
+                            return (
+                              <option key={index} value={item.value}>
+                                {item.name}
+                              </option>
+                            );
+                          }
+                        })}
                       </select>
                     </div>
                   </div>
@@ -127,4 +139,4 @@ const Converter = () => {
   );
 }
 
-export default Converter;
+export default ImgConverter;

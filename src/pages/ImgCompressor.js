@@ -17,11 +17,7 @@ const ImgCompressor = () => {
 
   const handelInput = (e) => {
     e.persist();
-    let value = e.target.value;
-    if (value != "") {
-      value = Number(value);
-    }
-    setInputParams({ ...inputParams, [e.target.name]: value });
+    setInputParams({ ...inputParams, [e.target.name]: e.target.value });
   };
 
 

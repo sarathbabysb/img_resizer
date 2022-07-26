@@ -18,7 +18,7 @@ const ImgResizer = () => {
   const handelInput = (e) => {
     e.persist();
     let value = e.target.value;
-    if(value!='') {
+    if(value!=='') {
       value = Number(value);
     }
     setInputParams({ ...inputParams, [e.target.name]: value });
