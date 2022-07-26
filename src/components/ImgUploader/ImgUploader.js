@@ -15,11 +15,16 @@ const ImgUploader = (props) => {
   const inputFileHandel = (e) => {
     if(e.target.files.length>0) {
       let file = e.target.files[0];
+      let fileName = file.name;
+      let allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+      if (!allowedExtensions.exec(fileName)) {
+        alert("Invalid image file type");
+        return false;
+      }
+      let fileExtension = fileName.split(".").pop();
       setSelectedFile(file);
       let imgSize = bytesToSize(file.size);
       let imgUrl = URL.createObjectURL(file);
-      var fileName = file.name;
-      var fileExtension = fileName.split(".").pop();
       let img = new Image();
       img.src = imgUrl;
       img.onload = () => {
@@ -50,9 +55,8 @@ const ImgUploader = (props) => {
           type="file"
           name="fileUpload"
           onChange={(e) => inputFileHandel(e)}
-          accept="image/png, image/jpeg, image/jpg"
         />
-        {/* <label
+        <label
           htmlFor="file-upload"
           id="file-drag"
           className={`${selectedFile === null ? "modal-body file-upload" : ""}`}
@@ -84,7 +88,7 @@ const ImgUploader = (props) => {
               Select Image
             </span>
           </div>
-        </label> */}
+        </label>
       </form>
     </div>
   );
