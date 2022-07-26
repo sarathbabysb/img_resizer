@@ -53,7 +53,7 @@ const Converter = () => {
             <div className="card p-0">
               <div className="card-header card-title">Choose new format</div>
               <div className="card-body">
-                <div className="row my-2">
+                <div className="row justify-content-center my-2">
                   <div className="col-md-4 col-sm-6">
                     <div className="input-group input-group-sm mb-3">
                       <span

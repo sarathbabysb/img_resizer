@@ -53,8 +53,8 @@ const ImgCompressor = () => {
             <div className="card p-0">
               <div className="card-header card-title">Compressed Image</div>
               <div className="card-body">
-                <div className="row my-2">
-                  <div className="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
+                <div className="row justify-content-center my-2">
+                  <div className="col-md-6 col-sm-12">
                     <div className="input-group input-group-sm mb-3">
                       <span
                         className="input-group-text"
