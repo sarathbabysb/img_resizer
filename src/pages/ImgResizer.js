@@ -10,8 +10,8 @@ const ImgResizer = () => {
     imageData: null,
     imageFileName: "",
     imgQuality: 1,
-    imgWidth: 0,
-    imgHeight: 0,
+    imgWidth: "",
+    imgHeight: "",
     imgFormat: "",
   });
 

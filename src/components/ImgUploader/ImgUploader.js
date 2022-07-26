@@ -7,8 +7,8 @@ const ImgUploader = (props) => {
   const { inputParams, setInputParams } = props;
   const [selectedFile, setSelectedFile] = useState(null);
   const [currentImage, setCurrentImage] = useState({
-    imgWidth: 0,
-    imgHeight: 0,
+    imgWidth: "",
+    imgHeight: "",
     imgSize: "0kb",
   });
 

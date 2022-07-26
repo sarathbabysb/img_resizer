@@ -10,8 +10,8 @@ const ImgCompressor = () => {
     imageData: null,
     imageFileName: "",
     imgQuality: 100,
-    imgWidth: 0,
-    imgHeight: 0,
+    imgWidth: "",
+    imgHeight: "",
     imgFormat: "",
   });
 
