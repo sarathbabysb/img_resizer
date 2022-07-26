@@ -52,7 +52,7 @@ const ImgUploader = (props) => {
           onChange={(e) => inputFileHandel(e)}
           accept="image/png, image/jpeg, image/jpg"
         />
-        <label
+        {/* <label
           htmlFor="file-upload"
           id="file-drag"
           className={`${selectedFile === null ? "modal-body file-upload" : ""}`}
@@ -84,7 +84,7 @@ const ImgUploader = (props) => {
               Select Image
             </span>
           </div>
-        </label>
+        </label> */}
       </form>
     </div>
   );
