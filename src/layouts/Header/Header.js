@@ -6,7 +6,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand logo">
-            <i className="fa-solid fa-scissors"></i>{" "}
+            <i className="fa-solid fa-scissors me-1"></i>
             {process.env.REACT_APP_NAME}
           </Link>
           <button
