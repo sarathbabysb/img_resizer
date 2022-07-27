@@ -1,11 +1,12 @@
+import Moment from "moment";
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="copy-right">
-        Copyright © 2022 {process.env.REACT_APP_NAME}
+        Copyright © {moment().year()} {process.env.REACT_APP_NAME}
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
