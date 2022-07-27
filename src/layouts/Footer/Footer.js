@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="copy-right">
-        Copyright © {moment().year()} {process.env.REACT_APP_NAME}
+        Copyright © {Moment.year()} {process.env.REACT_APP_NAME}
       </div>
     </footer>
   );
