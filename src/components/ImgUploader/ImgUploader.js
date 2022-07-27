@@ -73,7 +73,7 @@ const ImgUploader = (props) => {
             {selectedFile === null ? (
               <>
                 <i className="fa fa-file-import" aria-hidden="true"></i>
-                <div>Drop your images here or select a image</div>
+                <div>Select a jpg, jpeg or png image</div>
               </>
             ) : (
               <div id="notimage">
